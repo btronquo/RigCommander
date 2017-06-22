@@ -41,7 +41,7 @@ function getEwbf($ip)
 /* bacckup
 $ch = curl_init();
 // ---- set ip
-curl_setopt($ch, CURLOPT_URL, "192.168.1.83:42000");
+curl_setopt($ch, CURLOPT_URL, "127.0.0.1:42000");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "{\"ID\":\"0\", \"method\":\"getstat\"}");
 
