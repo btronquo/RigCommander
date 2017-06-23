@@ -36,80 +36,17 @@ require_once "inc/functions.php";
   <h1>Bienvenue sur RIG COMMMANDER</h1>
   <p>Version <b>Alpha</b> - <b>non</b> completement fonctionnelle</p>
   <hr>
+  <?php if($use_ewbf == true){ ?>
   <div class="row">
-    <div class="col-lg-3 col-md-6">
-        <div class="panel panel-primary">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fa fa-check-circle fa-5x" aria-hidden="true"></i>
-                    </div>
-                    <div class="col-xs-9 text-center">
-                        <h3>RIG 04</h3>
-                        <div>Connecté</div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel-footer text-center">
-              <a id="submit" class="btn btn-default" href="#" role="button">RESTART RIG #01</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6">
-        <div class="panel panel-red">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fa fa-check-circle fa-5x" aria-hidden="true"></i>
-                    </div>
-                    <div class="col-xs-9 text-center">
-                        <h3>RIG 04</h3>
-                        <div>Connecté</div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel-footer text-center">
-              <a id="submit" class="btn btn-default" href="#" role="button" disabled>RESTART RIG #02</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fa fa-check-circle fa-5x" aria-hidden="true"></i>
-                    </div>
-                    <div class="col-xs-9 text-center">
-                        <h3>RIG 04</h3>
-                        <div>Connecté</div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel-footer text-center">
-              <a id="submit" class="btn btn-warning" href="#" role="button" disabled>RESTART RIG #03</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fa fa-check-circle fa-5x" aria-hidden="true"></i>
-                    </div>
-                    <div class="col-xs-9 text-center">
-                        <h3>RIG 04</h3>
-                        <div>Connecté</div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel-footer text-center">
-              <a id="submit" class="btn btn-warning" href="#" role="button" disabled>RESTART RIG #04</a>
-            </div>
-        </div>
-    </div>
+    <?php
+    isDown("rig 01", true);
+    isDown("rig 02", false);
+    isDown("rig 03", false);
+    isDown("rig 04", true);
+    ?>
   </div>
+<?php } ?>
+
 
 <div class="row">
   <?php echo $message; ?>
@@ -127,26 +64,24 @@ require_once "inc/functions.php";
   .fin compteur -->
 </div>
 
+<?php if($use_ewbf == true){ ?>
 <div class="row">
   <h2><i class="fa fa-cog fa-spin fa-fw"></i> Informations API -> EWFB</h2>
   <em>Mise à jour toutes les secondes</em>
   <div id="status"></div>
 </div>
 
+<?php } ?>
+
 <div class="row">
   <h2><i class="fa fa-cog fa-spin fa-fw"></i> Informations Api -> Nanopool</h2>
   <em>Mise à jour toutes les secondes</em>
-  <p>Pas encore implémenté!</p>
 </div>
 
 <div class="row">
-  <p class="text-info">Pour le compte: <b><?php echo $datanano['data']['account']; ?></b></p>
   <div id="status2"></div>
 </div>
 
-
-
 <script src="js/scripts.js"></script>
-
 </body>
 </html>

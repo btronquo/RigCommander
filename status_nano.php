@@ -5,7 +5,7 @@
     $getnano = getNano($api_nano_url_zec);
     $datanano = json_decode($getnano,true);
 ?>
-
+<p class="text-info">Pour le wallet ZEC: <b><?php echo $datanano['data']['account']; ?></b></p>
 <div class="col-md-2 text-center">
   <div style="height: 130px" class="panel panel-warning">
     <div class="panel-heading"><h3 class="panel-title">Hashrate</h3>
