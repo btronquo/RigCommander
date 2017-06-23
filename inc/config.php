@@ -5,7 +5,7 @@
 // ---- wallet ZEC
 $wallet_eth = ''; // your wallet eth
 $wallet_sia = ''; // your wallet sia
-$wallet_zec = 't1g5uffMZarFayPmaMoViR2WsiGXLYbKpGM'; // your wallet zec
+$wallet_zec = ''; // your wallet zec
 
 // ----- put 'yes' or 'no' if you want to use these crypto currencies...
 $use_eth = 'no';
@@ -13,9 +13,10 @@ $use_sia = 'no';
 $use_zec = 'yes';
 
 // ----- EWFB ip adress
-$ewfb_ip = '192.168.1.83:42000'; // you can set to 127.0.0.1:42000 if you run ewfb in the same server than this webapp
+$ewfb_ip = '0.0.0.0.0:42000'; // you can set to 127.0.0.1:42000 if you run ewfb in the same server than this webapp
 
-
+// set true if you wan to use EWBF
+$use_ewbf = true;
 
 // ------------------------- Don't touch that - (or be kill - but that's none of my business.. ) ------------------ //
 
