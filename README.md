@@ -1,7 +1,15 @@
 # RigCommander
-Mini webPage to control Rig systems (crypto mining) via API - remote reboot, monitoring...
+Mini Webpage to control Rig systems (crypto mining) via API - remote reboot, monitoring...
+
+### RigCommander is only for EWFB with ZEC wallet and Nanopool
 
 More infos soon....
 
 
-### Warning: this is an alpha release.. not yet for production!
+Powered by:
+
+* Basic HTML5 / PHP5.6
+* BOOTSTRAP
+* FONT-AWESOME
+* JQUERY
+
